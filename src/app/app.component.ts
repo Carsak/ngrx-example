@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { User } from "../models/user";
 import { Store, select } from "@ngrx/store";
 import { selectUser } from "../store/user.selector";
-import { UpdateUser, GetUserID } from '../store/user.action';
+import { UpdateUser } from '../store/user.action';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,6 @@ import { UpdateUser, GetUserID } from '../store/user.action';
 
 export class AppComponent {
   user$ = this.store$.pipe(select(selectUser));
-
-  userId$ = this.store$.dispatch(new GetUserID());
 
   user: User;
 

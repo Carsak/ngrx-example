@@ -5,5 +5,5 @@ export interface UserState {
 }
 
 export const initialUserState: UserState = {
-    user: new User('Almat'),
+    user: new User(),
 }
